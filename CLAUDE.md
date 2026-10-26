@@ -5743,6 +5743,10 @@ good.
   upload. New files need their four pbxproj entries by hand.
   Swift 5 language mode.
 - `docs/BRIEF.md` — product decisions, competition, scope, risks.
+- `docs/protocol/` — `SPEC.md`, the wire protocol for a client written elsewhere (discovery, TLS and
+  pins, framing, every kind, the session, pairing, video and input), and `vectors.json`, its test
+  vectors as StreamProtocol computes them (`Tests/checks/protocol-vectors`; `run.sh --write`
+  regenerates the file after a wire change, which then updates SPEC.md too).
 - `docs/DEVELOPMENT.md` — building, running and testing from source; the
   README's developer material until 2026-09-25, so a plan's "README" means a
   section there: the toolchain, make-app.sh, Sill.app's menu and Quality, the
@@ -5819,7 +5823,8 @@ good.
   `menu-state` (iOSClient's MacMenuState), `menus` (the host's MenuFormat and
   MenuPolicy, and MacMenu.swift's JSON), `message-reader`, `origin`,
   `pairing-address`, `phone-portrait`, `pointer-control`, `pointer-presence`,
-  `pointer-watch`, `policy` (with its `home.swift`), `protocol`,
+  `pointer-watch`, `policy` (with its `home.swift`), `protocol`, `protocol-vectors` (that
+  docs/protocol/vectors.json is what the code gives),
   `remote-rules` (with its `home.swift`), `settings-window` (Sill.app's
   `SettingsWindowFit`), `tour`, `update-policy`, `virtual-display-api`
   (VirtualDisplay.swift whole, as VirtualDisplayProbe compiles it: its surface,
